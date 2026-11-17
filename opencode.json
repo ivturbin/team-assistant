@@ -1,14 +1,11 @@
 {
   "$schema": "https://opencode.ai/config.json",
-
   "agents": {
     "plan": {
-      "model": "YOUR_PROVIDER/YOUR_REASONING_MODEL",
-      "temperature": 0.2
+      "model": "opencode/glm-5.3-flash"
     },
     "build": {
-      "model": "YOUR_PROVIDER/YOUR_CODING_MODEL",
-      "temperature": 0.2
+      "model": "opencode/deepseek-v4.1-flash"
     }
   }
 }
