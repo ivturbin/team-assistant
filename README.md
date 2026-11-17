@@ -37,13 +37,25 @@ The service starts on port `8080`.
 
 ### `GET /hello`
 
-Returns a greeting.
+Returns a greeting. Supports an optional `name` query parameter.
 
 **Response:** `200 OK`
 
 ```
 Привет
 ```
+
+With the optional `name` parameter:
+
+```
+GET /hello?name=Иван
+```
+
+```
+Привет, Иван!
+```
+
+Without the parameter, the response contains only the greeting: `Привет`.
 
 ## Tests
 
