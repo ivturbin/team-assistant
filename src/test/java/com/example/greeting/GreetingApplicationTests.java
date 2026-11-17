@@ -23,4 +23,11 @@ class GreetingApplicationTests {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Привет"));
     }
+
+    @Test
+    void helloReturnsGreetingWithName() throws Exception {
+        mockMvc.perform(get("/hello").param("name", "Иван"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Привет, Иван!"));
+    }
 }
