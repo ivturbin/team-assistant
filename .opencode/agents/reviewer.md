@@ -1,6 +1,7 @@
 ---
 description: Independent code reviewer. Finds bugs, security issues and regressions.
 mode: subagent
+model: opencode/mimo-v2.6-flash
 temperature: 0.1
 ---
 
