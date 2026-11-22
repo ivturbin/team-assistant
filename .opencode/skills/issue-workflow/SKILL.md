@@ -33,7 +33,7 @@ Use GitHub Issues as the canonical source of work. Do not use a local `tasks/` d
    - Constraints / out of scope
    - Verification
 3. Keep implementation decisions open when they are not necessary to define the desired outcome. Do not invent requirements.
-4. Create it with `gh issue create --title "..." --body "...`.
+4. Create it with `gh issue create --title "..." --body-file - <<'EOF'`, followed by the Issue body and a closing `EOF` line. This avoids shell-escaping problems with multiline Markdown.
 5. Add the `agent-ready` label only if that label already exists and the Issue is sufficiently specified for autonomous implementation. Do not create labels or assign people unless asked.
 6. Report the Issue number and URL. Do not start implementation unless the user also asked for it.
 
