@@ -41,6 +41,28 @@ GET /hello?name=Иван
 
 Without the parameter, the response contains only the greeting: `Привет`.
 
+### `GET /api/products`
+
+Returns the product catalog for the storefront. Returns a JSON array of sample products from a small deterministic in-memory collection; no database or external services are used.
+
+**Response:** `200 OK`
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Ноутбук Air",
+    "description": "Надёжный ноутбук для дома и работы",
+    "price": 54990,
+    "currency": "RUB",
+    "imageUrl": "https://placehold.co/800x450?text=NocTIP",
+    "available": true
+  }
+]
+```
+
+The catalog contains several sample products and is deterministic: it does not change between requests.
+
 ## Requirements
 
 - Java 21
